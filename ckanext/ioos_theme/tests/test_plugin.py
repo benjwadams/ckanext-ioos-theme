@@ -24,3 +24,6 @@ class TestIOOSPlugin(TestCase):
         expected = [{'name': 'oceans'}]
         self.assertEqual(plugin.split_gcmd_tags([' oceans ']), expected)
         self.assertEqual(plugin.split_gcmd_tags(['oceans']), expected)
+
+    def test_filter_tag_names(self):
+        pass

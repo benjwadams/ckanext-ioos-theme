@@ -217,6 +217,15 @@ def get_pkg_extra(pkg, key):
         return None
     return pkg_item
 
+def filter_tag_names(tags, excludes):
+    """
+    Takes a list of tags and iterable of names to be excluded and filters out
+    any tags which have a display_name which is present in the set of values to
+    be excluded.
+    """
+    excludes_set = set(excludes)
+    return [tag_dict for tag_dict in tags
+            if tag_dict['display_name'] not in excludes_set]
 
 def jsonpath(obj, path):
     for key in path.split('.'):
@@ -446,6 +455,7 @@ class Ioos_ThemePlugin(p.SingletonPlugin):
             "ioos_theme_get_pkg_ordereddict": get_pkg_ordereddict,
             "ioos_theme_jsonpath": jsonpath,
             "ioos_theme_get_role_code": get_role_code,
+            "filter_tag_names": filter_tag_names,
             "gcmd_generate": gcmd_generate,
         }
 
