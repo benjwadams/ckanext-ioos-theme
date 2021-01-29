@@ -1,5 +1,10 @@
 {% ckan_extends %}
-<img src="img/top-ioos-logo.png" alt="IOOS Logo" title="IOOS Logo" style="display: block;margin: auto;padding-top: 15px;">
+{% block header_account %}
+  <a href=https://ioos.us">
+     <img src="img/top-ioos-logo.png" alt="IOOS Logo" id="header-logo" title="IOOS Logo">
+  </a>
+  {{super()}}
+{% endblock %}
 <a href="https://ioos.us"><img src="img/IOOS.png" alt="IOOS alt logo"></a>
 {% block header_site_navigation %}
   <nav class="section navigation">

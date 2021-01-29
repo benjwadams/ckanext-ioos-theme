@@ -4,6 +4,13 @@
   }
 }
 
+img #header-logo {
+    display: block;
+    margin: 10px;
+    width: 480px;
+    padding-top: 15px;
+}
+
 .container{
   padding-left: 10px;
   padding-right: 10px;
