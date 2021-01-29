@@ -4,7 +4,11 @@
   }
 }
 
-img #header-logo {
+#center-log {
+    text-align: center;
+}
+
+#header-logo {
     display: block;
     margin: 10px;
     width: 480px;
