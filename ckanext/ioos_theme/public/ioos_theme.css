@@ -10,9 +10,11 @@
 
 #header-logo {
     display: block;
-    margin: 10px;
+    margin-bottom: 10px;
     width: 480px;
     padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container{
